@@ -1,0 +1,131 @@
+* {
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+	margin: 0px;
+}
+button {
+	cursor: pointer;
+	outline: none;
+	background-color: transparent;
+	border: 0px;
+}
+
+.base {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.centering {
+	width: 100%;
+	max-width: 400px;
+	height: 386px;
+}
+
+.calender {
+	width: 100%;
+	max-width: 400px;
+	box-shadow: 0px 2px 3px 1px rgba(0,0,0,0.100);
+	border-radius: 16px;
+	overflow: hidden;
+}
+
+.header {
+	width: 100%;
+	height: 60px;
+	display: grid;
+	background-color: #1582ff;
+	grid-template-columns: 50px 1fr 50px;
+}
+.headerName {
+	transition: all .3s ease;
+	color: white;
+	width: 100%;
+	height: 100%;
+	font-size: 18px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent;
+	border: 0px;
+}
+.nav {
+	border: 0px;
+	background-color: transparent;
+	font-size: 16px;
+	font-weight: 600;
+	transition: all .3s ease;
+	color: white;
+}
+.nav:hover, .headerName:hover {
+	background-color: #1575e2;
+}
+
+.content {
+	position: relative;
+	overflow: hidden;
+}
+
+.dayNames, .dayDates {
+	margin: 10px 0;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.dayNames div {
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 13px;
+	font-weight: 600;
+}
+.dayDates button {
+	height: 44px;
+	background-color: transparent;
+	border: 0px;
+	transition: all .3s ease;
+}
+.dayDates button:hover,
+.monthSection button:hover,
+.yearSection button:hover {
+	background-color: #f1f1f1;
+}
+.offset {
+	color: #c5c5c5;
+}
+
+.monthSection, .yearSection {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	background-color: white;
+	transform: scale(1.1);
+	transition: all .25s ease-out;
+	visibility: hidden;
+	opacity: 0;
+}
+.select {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.show {
+	transform: scale(1);
+	visibility: visible;
+	opacity: 1;
+}
+.monthSection button, .yearSection button {
+	transition: all .3s ease;
+}
+.mark span {
+	padding: 6px 10px;
+	background-color: #1582ff;
+	border-radius: 18px;
+	color: white;
+}
